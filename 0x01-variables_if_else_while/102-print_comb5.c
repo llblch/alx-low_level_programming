@@ -10,7 +10,7 @@ int main(void)
 
 	for (i = 0; i < 100; i++)
 	{
-		for (p = 0 : p < 100; i++)
+		for (p = 0 ; p < 100; i++)
 		{
 			if (p > i)
 			{
@@ -27,6 +27,6 @@ int main(void)
 			}
 		}
 	}
-	Putchar('\n');
+	putchar('\n');
 	return (0);
 }
