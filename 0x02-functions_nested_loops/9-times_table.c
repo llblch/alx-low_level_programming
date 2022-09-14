@@ -1,23 +1,30 @@
-#include <stdio.h>
+#include <main.h>
 /**
- * main - printing numbers from 0-9 with commas and space between them
- * Description: using the main function
- * this program prints "0, 1, 2, 3, 4, 5, 6, 7, 8, 9"
- * Return: 0
+ * times_table - Prints the 9 times table, starting with 0
  */
-int main(void)
-{
-	int c;
 
-	for (c = 48; c <= 57; c++)
+void times_table(void)
+{
+	int num, mult, prod;
+
+	for (num = 0; num <= 9; num++)
 	{
-		putchar(c);
-		if (c != 57)
+		_putchar('0');
+
+		for (mult = 1; mult <= 9; mult++)
 		{
-			putchar(',');
-			putchar(' ');
+			_putchar(',');
+			_putchar(' ');
+
+			prod = num * mult;
+
+			if (prod <= 9)
+				_putchar(' ');
+			else
+				_putchar((prod / 10) + '0');
+
+			_putchar((prod % 10) + '0');
 		}
+		_putchar('\n');
 	}
-	putchar('\n');
-	return (0);
 }
