@@ -3,17 +3,17 @@
 
 /**
  * print_diagonal - prints a diagonal
- * @i: parameter
- * Return: returns 0
+ * @n: parameter
+ * Return: returns nothing
  */
 
-void print_diagonal(int i)
+void print_diagonal(int n)
 {
 	int len, space;
 
-	if (i > 0)
+	if (n > 0)
 	{
-		for (len = 0; len < i; len++)
+		for (len = 0; len < n; len++)
 		{
 			for (space = 0; space < len; space++)
 			{
@@ -21,11 +21,12 @@ void print_diagonal(int i)
 			}
 			putchar('\\');
 
-			if (len == (i - 1))
+			if (len == (n - 1))
 			{
 				continue;
 			}
 			putchar('\n');
 		}
 	}
+	putchar('\n');
 }
