@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/***
+/**
  * main - prints either number or fizz or buzz or fizzBuzz
  *
  * Return: returns 0
@@ -10,7 +10,6 @@
 int main(void)
 {
 	int i;
-
 	char f[] = "Fizz";
 	char b[] = "Buzz";
 	char fb[] = "FizzBuzz";
