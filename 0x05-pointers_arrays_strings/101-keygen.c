@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "main.h"
 
 /**
@@ -7,21 +8,19 @@
  *
  * Return: password
  */
-
 int main(void)
 {
-	int myrand;
-	int count;
-	int total;
+	char c;
+	int x;
 
-	srand(time(NULL));
-	for (count = 0, total = 2772; total > 122; count++)
+	srand(time(0));
+	while (x <= 2645)
 	{
-		myrand = (rand() % 125) + 1;
-		printf("%c", myrand);
-		total -= myrand;
+		c = rand() % 128;
+		x += c;
+		putchar(c);
 	}
-	printf("%c", total);
+	putchar(2772 - x);
 
 	return (0);
 }
