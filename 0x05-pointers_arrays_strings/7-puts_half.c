@@ -2,17 +2,17 @@
 #include "main.h"
 
 /**
- * puts_half - Prints out the first half of a string
- * @str: input string to print.
+ * _strlen - Prints out the first half of a string
+ * @s: input string to print.
  *
- * Return retunrs 0
+ * Return: retunrs 0
  */
 
-void puts_half(char *str)
+int _strlen(char *s)
 {
-	int i, len = strlen(str);
+	int len = 0;
 
-	for (i = ((len - 1) / 2) + 1; i < len; i++)
-		putchar(*(str + i));
-	putchar(10);
+	while (*(s + len) != '\0')
+		len++;
+	return (len);
 }
