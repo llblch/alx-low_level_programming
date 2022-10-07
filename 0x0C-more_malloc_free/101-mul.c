@@ -85,7 +85,7 @@ int get_digit(char c)
 }
 
 /**
- * get_prod - function function that multiplies a string of numbers by a single digit
+ * get_prod - function that multiplies a string of numbers by a single digit
  * @prod: The buffer to store the result
  * @mult: The string of numbers
  * @digit: The single digit
