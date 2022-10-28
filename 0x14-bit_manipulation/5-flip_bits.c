@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  * flip_bits - counts the number of bits to change
@@ -10,16 +10,13 @@ nclude "main.h"
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int i, count = 0;
-	unsigned long int current;
-	unsigned long int exclusive = n ^ m;
+	unsigned long int xor = n ^ m, bits = 0;
 
-	for (i = 63; i >= 0; i--)
+	while (xor > 0)
 	{
-		current = exclusive >> i;
-		if (current & 1)
-			count++;
+		bits += (xor & 1);
+		xor >>= 1;
 	}
 
-	return (count);
+	return (bits);
 }
